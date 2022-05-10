@@ -15,9 +15,9 @@ namespace WpfApp1
     public partial class Rating
     {
         public int NumberRating { get; set; }
-        public int Film_ID { get; set; }
-        public int Reviewer_ID { get; set; }
-        public int Score { get; set; }
+        public Nullable<int> Film_ID { get; set; }
+        public Nullable<int> Reviewer_ID { get; set; }
+        public Nullable<int> Score { get; set; }
     
         public virtual Film Film { get; set; }
         public virtual Reviewer Reviewer { get; set; }
