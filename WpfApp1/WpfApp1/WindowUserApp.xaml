@@ -89,7 +89,7 @@
                                         <TextBlock Text="{Binding Path = Duration, StringFormat='Продолжительность: {0}'}" Foreground="White" FontFamily="Bahnschrift Light Condensed" FontSize="20" Margin="30, 5, 10, 0"/>
                                         <TextBlock Text="{Binding Path = Country, StringFormat='Страна: {0}'}" Foreground="White" FontFamily="Bahnschrift Light Condensed" FontSize="20" Margin="30, 5, 10, 0"/>
                                         <TextBlock x:Name="ScoreShow" Text="{Binding Path = rateScore}" Height="50" Width="50" Margin="500,20, 0, 0" Background="{x:Null}" Foreground="White" FontFamily="Bahnschrift Light Condensed" FontSize="30"/>
-                                        <Button Content="Поставить оценку" Height="25" VerticalAlignment="Top" Width="150" Click="RateClick" Margin="500,0, 0, 0" BorderBrush="Black" Background="{x:Null}" Foreground="White" FontFamily="Bahnschrift Light Condensed" FontSize="20"/>
+                                        <Button Content="Поставить оценку" Height="25" VerticalAlignment="Top" Width="150" Click="RateClick" Margin="400,0, 0, 0" BorderBrush="Black" Background="{x:Null}" Foreground="White" FontFamily="Bahnschrift Light Condensed" FontSize="20"/>
                                     </StackPanel>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>

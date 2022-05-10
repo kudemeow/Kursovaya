@@ -117,41 +117,49 @@ namespace WpfApp1
         {
             if ((sender as Button).DataContext is Film film)
             {
+                CinemaEntities.GetContext().SaveChanges();
                 CinemaEntities.GetContext().Film.Add(film);
                 Tables.ItemsSource = CinemaEntities.GetContext().Film.ToList();
             }
             else if ((sender as Button).DataContext is Reviewer reviewer)
             {
+                CinemaEntities.GetContext().SaveChanges();
                 CinemaEntities.GetContext().Reviewer.Add(reviewer);
                 Tables.ItemsSource = CinemaEntities.GetContext().Reviewer.ToList();
             }
             else if ((sender as Button).DataContext is Administrator administrator)
             {
+                CinemaEntities.GetContext().SaveChanges();
                 CinemaEntities.GetContext().Administrator.Add(administrator);
                 Tables.ItemsSource = CinemaEntities.GetContext().Administrator.ToList();
             }
             else if ((sender as Button).DataContext is Actor actor)
             {
+                CinemaEntities.GetContext().SaveChanges();
                 CinemaEntities.GetContext().Actor.Add(actor);
                 Tables.ItemsSource = CinemaEntities.GetContext().Actor.ToList();
             }
             else if ((sender as Button).DataContext is Casting casting)
             {
+                CinemaEntities.GetContext().SaveChanges();
                 CinemaEntities.GetContext().Casting.Add(casting);
                 Tables.ItemsSource = CinemaEntities.GetContext().Casting.ToList();
             }
             else if ((sender as Button).DataContext is Director director)
             {
+                CinemaEntities.GetContext().SaveChanges();
                 CinemaEntities.GetContext().Director.Add(director);
                 Tables.ItemsSource = CinemaEntities.GetContext().Director.ToList();
             }
             else if ((sender as Button).DataContext is Rating rating)
             {
+                CinemaEntities.GetContext().SaveChanges();
                 CinemaEntities.GetContext().Rating.Add(rating);
                 Tables.ItemsSource = CinemaEntities.GetContext().Rating.ToList();
             }
             else if ((sender as Button).DataContext is Genre genre)
             {
+                CinemaEntities.GetContext().SaveChanges();
                 CinemaEntities.GetContext().Genre.Add(genre);
                 Tables.ItemsSource = CinemaEntities.GetContext().Genre.ToList();
             }
