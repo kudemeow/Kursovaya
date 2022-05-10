@@ -1,0 +1,27 @@
+﻿<Window x:Class="Kursach.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Registration" Height="482" Width="571">
+    <Grid Margin="0,0,0,0">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#b48764"/>
+                <GradientStop Color="#887359" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Регистрация" HorizontalAlignment="Left" Height="79" Width="264" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FFF4EBEB" FontSize="60" FontFamily="Bahnschrift Light Condensed" Margin="149,26,0,0"/>
+        <TextBox x:Name="LoginReg" HorizontalAlignment="Left" Height="30" Margin="223,254,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" BorderBrush="Black" Background="{x:Null}" FontFamily="Bahnschrift Light Condensed" FontSize="20"/>
+        <Label Content="Логин" HorizontalAlignment="Left" Height="48" Margin="17,245,0,0" VerticalAlignment="Top" Width="93" Foreground="#FFF4EBEB" FontSize="35" FontFamily="Bahnschrift Light Condensed"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Height="51" Margin="17,293,0,0" VerticalAlignment="Top" Width="111" Foreground="#FFF4EBEB" FontSize="35" FontFamily="Bahnschrift Light Condensed"/>
+        <Button x:Name="Save" Content="Сохранить" HorizontalAlignment="Left" Height="35" Margin="354,380,0,0" VerticalAlignment="Top" Width="182" BorderBrush="Black" Background="{x:Null}" FontFamily="Bahnschrift Light Condensed" FontSize="25" Click="ClickSave"/>
+        <PasswordBox x:Name="PasswordReg" HorizontalAlignment="Left" Height="30" Margin="223,304,0,0" VerticalAlignment="Top" Width="222" BorderBrush="Black" Background="{x:Null}" FontFamily="Bahnschrift Light Condensed" FontSize="20"/>
+        <TextBox x:Name="Familiya" HorizontalAlignment="Left" Height="30" Margin="223,158,0,0" VerticalAlignment="Top" Width="222" BorderBrush="Black" Background="{x:Null}" FontFamily="Bahnschrift Light Condensed" FontSize="20"/>
+        <TextBox x:Name="Imya" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="222" BorderBrush="Black" Background="{x:Null}" FontFamily="Bahnschrift Light Condensed" FontSize="20" Margin="223,206,0,0"/>
+        <Label Content="Имя" HorizontalAlignment="Left" Height="48" Margin="17,197,0,0" VerticalAlignment="Top" Width="61" Foreground="#FFF4EBEB" FontSize="35" FontFamily="Bahnschrift Light Condensed"/>
+        <Label Content="Фамилия" HorizontalAlignment="Left" Height="48" Margin="17,149,0,0" VerticalAlignment="Top" Width="122" Foreground="#FFF4EBEB" FontSize="35" FontFamily="Bahnschrift Light Condensed"/>
+    </Grid>
+</Window>

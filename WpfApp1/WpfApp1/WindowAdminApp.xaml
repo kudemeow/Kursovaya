@@ -1,0 +1,54 @@
+﻿<Window x:Class="WpfApp1.WindowAdminApp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="WindowAdminApp" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0">
+            <Button Width="100" HorizontalAlignment="Left" Click="OpenFilms">
+                <TextBlock Text="Таблица фильмов" TextTrimming="CharacterEllipsis"/>
+            </Button>
+            <Button Width="100" HorizontalAlignment="Left" Click="OpenUsers">
+                <TextBlock Text="Таблица пользователей" TextTrimming="CharacterEllipsis"/>
+            </Button>
+            <Button Width="100" HorizontalAlignment="Left" Click="OpenAdmins">
+                <TextBlock Text="Таблица администраторов" TextTrimming="CharacterEllipsis"/>
+            </Button>
+            <Button Content="Таблица актеров" Width="100" HorizontalAlignment="Left" Click="OpenActors"/>
+            <Button Width="100" HorizontalAlignment="Left" Click="OpenCasting">
+                <TextBlock Text="Таблица кастингов" TextTrimming="CharacterEllipsis"/>
+            </Button>
+            <Button Content="Таблица жанров" Width="100" HorizontalAlignment="Left" Click="OpenGenres"/>
+            <Button Width="100" HorizontalAlignment="Left" Click="OpenDirectors">
+                <TextBlock Text="Таблица режиссеров" TextTrimming="CharacterEllipsis"/>
+            </Button>
+            <Button Width="100" HorizontalAlignment="Left" Click="OpenRates">
+                <TextBlock Text="Таблица рейтинга" TextTrimming="CharacterEllipsis"/>
+            </Button>
+        </DockPanel>
+        <DataGrid x:Name="TablesFilms" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Удалить" Name="Delete" Click="DeleteClick"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DockPanel Grid.Row="2">
+            <Button x:Name="Change" Content="Изменить" Width="120" HorizontalAlignment="Left" Margin="0,0,0,0" Click="EditClick"/>
+            <Button x:Name="Add" Content="Добавить" Width="120" HorizontalAlignment="Left" Margin="70,0,0,0" Click="AddClick"/>
+            <Button x:Name="Exit" Content="Выйти" Width="120" HorizontalAlignment="Left" Margin="370,0,0,0" Click="ExitClick"/>
+        </DockPanel>
+    </Grid>
+</Window>

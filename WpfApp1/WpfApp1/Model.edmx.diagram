@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="37792e40a43342fc8673a052e806861f" Name="Diagram1">
+        <EntityTypeShape EntityType="CinemaModel.Actor" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Administrator" Width="1.5" PointX="7.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Casting" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Director" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Film" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Genre" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Rating" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CinemaModel.Reviewer" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="CinemaModel.fk_actorID" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.fk_CasFilm" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.fk_dirID" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.fk_RatFilm" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.fk_RatRew" ManuallyRouted="false" />
+        <AssociationConnector Association="CinemaModel.FilmGenre" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
