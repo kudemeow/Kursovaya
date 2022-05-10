@@ -34,7 +34,7 @@
                 <TextBlock Text="Таблица рейтинга" TextTrimming="CharacterEllipsis"/>
             </Button>
         </DockPanel>
-        <DataGrid x:Name="TablesFilms" Grid.Row="1">
+        <DataGrid x:Name="Tables" Grid.Row="1">
             <DataGrid.Columns>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>

@@ -1,17 +1,8 @@
 ﻿using Kursach;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace WpfApp1
 {
@@ -19,7 +10,7 @@ namespace WpfApp1
     {
         List<Film> films;
         List<Reviewer> reviewers;
-        List<Actor> actors;
+        List<Actor> actors; 
         List<Administrator> administrators;
         List<Casting> castings;
         List<Director> directors;
@@ -32,7 +23,7 @@ namespace WpfApp1
         private void OpenFilms(object sender, RoutedEventArgs e)
         {
             films = CinemaEntities.GetContext().Film.ToList();
-            TablesFilms.ItemsSource = films;
+            Tables.ItemsSource = films;
         }
         private void OpenUsers(object sender, RoutedEventArgs e)
         {
@@ -71,154 +62,135 @@ namespace WpfApp1
         }
         private void DeleteClick(object sender, RoutedEventArgs e)
         {
-            if((sender as Button).DataContext is Film film) {
+            if((sender as Button).DataContext is Film film)
+            {
                 CinemaEntities.GetContext().Film.Remove(film);
                 CinemaEntities.GetContext().SaveChanges();
-                Tables.ItemsSource = films;
+                Tables.ItemsSource = CinemaEntities.GetContext().Film.ToList(); ;
             }
             else if ((sender as Button).DataContext is Reviewer reviewer)
             {
                 CinemaEntities.GetContext().Reviewer.Remove(reviewer);
                 CinemaEntities.GetContext().SaveChanges();
-                Tables.ItemsSource = reviewers;
+                Tables.ItemsSource = CinemaEntities.GetContext().Reviewer.ToList(); ;
             }
             else if((sender as Button).DataContext is Administrator administrator)
             {
                 CinemaEntities.GetContext().Administrator.Remove(administrator);
                 CinemaEntities.GetContext().SaveChanges();
-                Tables.ItemsSource = administrators;
+                Tables.ItemsSource = CinemaEntities.GetContext().Administrator.ToList(); ;
             }
             else if((sender as Button).DataContext is Actor actor)
             {
                 CinemaEntities.GetContext().Actor.Remove(actor);
                 CinemaEntities.GetContext().SaveChanges();
-                Tables.ItemsSource = actors;
+                Tables.ItemsSource = CinemaEntities.GetContext().Actor.ToList(); ;
             }
             else if((sender as Button).DataContext is Casting casting)
             {
                 CinemaEntities.GetContext().Casting.Remove(casting);
                 CinemaEntities.GetContext().SaveChanges();
-                Tables.ItemsSource = castings;
+                Tables.ItemsSource = CinemaEntities.GetContext().Casting.ToList(); ;
             }
             else if((sender as Button).DataContext is Director director)
             {
                 CinemaEntities.GetContext().Director.Remove(director);
                 CinemaEntities.GetContext().SaveChanges();
-                Tables.ItemsSource = directors;
+                Tables.ItemsSource = CinemaEntities.GetContext().Director.ToList(); ;
             }
             else if((sender as Button).DataContext is Genre genre)
             {
                 CinemaEntities.GetContext().Genre.Remove(genre);
                 CinemaEntities.GetContext().SaveChanges();
-                Tables.ItemsSource = genres;
+                Tables.ItemsSource = CinemaEntities.GetContext().Genre.ToList(); ;
             }
             else if((sender as Button).DataContext is Rating rating)
             {
                 CinemaEntities.GetContext().Rating.Remove(rating);
                 CinemaEntities.GetContext().SaveChanges();
-                Tables.ItemsSource = ratings;
+                Tables.ItemsSource = CinemaEntities.GetContext().Rating.ToList(); ;
             }
 
             Tables.Items.Refresh();
         }
         private void AddClick(object sender, RoutedEventArgs e)
         {
-            //AddWindow addWindow = new AddWindow();
-            //addWindow.Show();
-
             if ((sender as Button).DataContext is Film film)
             {
                 CinemaEntities.GetContext().Film.Add(film);
-                //CinemaEntities.GetContext().SaveChanges();
                 Tables.ItemsSource = CinemaEntities.GetContext().Film.ToList();
             }
             else if ((sender as Button).DataContext is Reviewer reviewer)
             {
                 CinemaEntities.GetContext().Reviewer.Add(reviewer);
-                //CinemaEntities.GetContext().SaveChanges();
                 Tables.ItemsSource = CinemaEntities.GetContext().Reviewer.ToList();
             }
             else if ((sender as Button).DataContext is Administrator administrator)
             {
                 CinemaEntities.GetContext().Administrator.Add(administrator);
-                //CinemaEntities.GetContext().SaveChanges();
                 Tables.ItemsSource = CinemaEntities.GetContext().Administrator.ToList();
             }
             else if ((sender as Button).DataContext is Actor actor)
             {
                 CinemaEntities.GetContext().Actor.Add(actor);
-                //CinemaEntities.GetContext().SaveChanges();
                 Tables.ItemsSource = CinemaEntities.GetContext().Actor.ToList();
             }
             else if ((sender as Button).DataContext is Casting casting)
             {
                 CinemaEntities.GetContext().Casting.Add(casting);
-                //CinemaEntities.GetContext().SaveChanges();
                 Tables.ItemsSource = CinemaEntities.GetContext().Casting.ToList();
             }
             else if ((sender as Button).DataContext is Director director)
             {
                 CinemaEntities.GetContext().Director.Add(director);
-                //CinemaEntities.GetContext().SaveChanges();
                 Tables.ItemsSource = CinemaEntities.GetContext().Director.ToList();
             }
             else if ((sender as Button).DataContext is Rating rating)
             {
                 CinemaEntities.GetContext().Rating.Add(rating);
-                //CinemaEntities.GetContext().SaveChanges();
                 Tables.ItemsSource = CinemaEntities.GetContext().Rating.ToList();
             }
             else if ((sender as Button).DataContext is Genre genre)
             {
                 CinemaEntities.GetContext().Genre.Add(genre);
-                //CinemaEntities.GetContext().SaveChanges();
                 Tables.ItemsSource = CinemaEntities.GetContext().Genre.ToList();
             }
 
             CinemaEntities.GetContext().SaveChanges();
             Tables.Items.Refresh();
         }
-
         private void EditClick(object sender, RoutedEventArgs e)
         {
-            if ((sender as Button).DataContext is Film film)
+            if ((sender as Button).DataContext is Film)
             {
-                CinemaEntities.GetContext().SaveChanges();
                 Tables.ItemsSource = CinemaEntities.GetContext().Film.ToList();
             }
-            else if ((sender as Button).DataContext is Reviewer reviewer)
+            else if ((sender as Button).DataContext is Reviewer)
             {
-                CinemaEntities.GetContext().SaveChanges();
                 Tables.ItemsSource = CinemaEntities.GetContext().Reviewer.ToList();
             }
-            else if ((sender as Button).DataContext is Administrator administrator)
+            else if ((sender as Button).DataContext is Administrator)
             {
-                CinemaEntities.GetContext().SaveChanges();
                 Tables.ItemsSource = CinemaEntities.GetContext().Administrator.ToList();
             }
-            else if ((sender as Button).DataContext is Actor actor)
+            else if ((sender as Button).DataContext is Actor)
             {
-                CinemaEntities.GetContext().SaveChanges();
                 Tables.ItemsSource = CinemaEntities.GetContext().Actor.ToList();
             }
-            else if ((sender as Button).DataContext is Casting casting)
+            else if ((sender as Button).DataContext is Casting)
             {
-                CinemaEntities.GetContext().SaveChanges();
                 Tables.ItemsSource = CinemaEntities.GetContext().Casting.ToList();
             }
-            else if ((sender as Button).DataContext is Director director)
+            else if ((sender as Button).DataContext is Director)
             {
-                CinemaEntities.GetContext().SaveChanges();
                 Tables.ItemsSource = CinemaEntities.GetContext().Director.ToList();
             }
-            else if ((sender as Button).DataContext is Rating rating)
+            else if ((sender as Button).DataContext is Rating)
             {
-                CinemaEntities.GetContext().SaveChanges();
                 Tables.ItemsSource = CinemaEntities.GetContext().Rating.ToList();
             }
-            else if ((sender as Button).DataContext is Genre genre)
+            else if ((sender as Button).DataContext is Genre)
             {
-                CinemaEntities.GetContext().SaveChanges();
                 Tables.ItemsSource = CinemaEntities.GetContext().Genre.ToList();
             }
 
