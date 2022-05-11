@@ -28,26 +28,6 @@ namespace Kursach
             Rate rate = new Rate(idFilm);
             rate.ShowDialog();
         }
-        //private void ScoreCount()
-        //{
-        //    CinemaEntities db = new CinemaEntities();
-        //    int rateScore = 0;
-        //    var score = (from rating in db.Rating
-        //                 where rating.Reviewer_ID == 1
-        //                 select rating).FirstOrDefault();
-        //    var all = (from rating in db.Rating
-        //               select rating).FirstOrDefault();
-            
-        //    if(score != null)
-        //    {
-        //        for(int i = 0; i <= all; i++)
-        //        {
-        //            rateScore = (score + i) / all;
-        //        }
-        //    }
-
-        //    ScoreShow.ItemsSource = rateScore;
-        //}
         private void Searcher_TextChanged(object sender, TextChangedEventArgs e)
         {
             string Text = Searcher.Text.ToLower().Trim();

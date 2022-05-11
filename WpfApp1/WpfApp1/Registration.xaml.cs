@@ -40,8 +40,8 @@ namespace Kursach
                         Familiya = Familiya.Text,
                         Imya = Imya.Text
                     };
-                    if (!string.IsNullOrWhiteSpace(LoginReg.Text) || !string.IsNullOrWhiteSpace(PasswordReg.Password)
-                        || !string.IsNullOrWhiteSpace(Familiya.Text) || !string.IsNullOrWhiteSpace(Imya.Text))
+                    if (!string.IsNullOrWhiteSpace(LoginReg.Text) && !string.IsNullOrWhiteSpace(PasswordReg.Password)
+                        && !string.IsNullOrWhiteSpace(Familiya.Text) && !string.IsNullOrWhiteSpace(Imya.Text))
                     {
                         db.Reviewer.Add(reviewer);
                         db.SaveChanges();

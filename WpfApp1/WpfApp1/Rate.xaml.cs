@@ -15,13 +15,15 @@ namespace WpfApp1
 
         public Rate(int CurrentFilmId)
         {
-            currentFilmId = CurrentFilmId;
             InitializeComponent();
+
+            currentFilmId = CurrentFilmId;
             using (CinemaEntities db = new CinemaEntities())
             {
                 Rating lastRating = db.Rating.Where(rating => rating.Film_ID == CurrentFilmId &&
                                                     rating.Reviewer_ID == AppInfo.currentUserId).FirstOrDefault();
                 choosenScore = (lastRating is null) ? 0 : (int)lastRating.Score;
+
                 if (choosenScore != 0)
                 {
                     ratingId = lastRating.NumberRating;
@@ -60,5 +62,4 @@ namespace WpfApp1
             }
         }
     }
-
 }
