@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="WindowAdminApp" Height="550" Width="810">
+        Title="Окно администратора" Height="550" Width="810">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
