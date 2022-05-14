@@ -79,8 +79,8 @@
                                             <ItemsControl.ItemTemplate>
                                                 <DataTemplate>
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock Text="{Binding Path=Actor.LastName, StringFormat='{}{0}'}" Foreground="White" FontFamily="Bahnschrift Light Condensed" FontSize="20" Margin="30, 5, 10, 0"/>
-                                                        <TextBlock Text="{Binding Path=Actor.FirstName, StringFormat='{}{0} - '}" Foreground="White" FontFamily="Bahnschrift Light Condensed" FontSize="20" Margin="0, 5, 10, 0"/>
+                                                        <TextBlock Text="{Binding Path=Actor.FirstName, StringFormat='{}{0}'}" Foreground="White" FontFamily="Bahnschrift Light Condensed" FontSize="20" Margin="30, 5, 10, 0"/>
+                                                        <TextBlock Text="{Binding Path=Actor.LastName, StringFormat='{}{0} - '}" Foreground="White" FontFamily="Bahnschrift Light Condensed" FontSize="20" Margin="0, 5, 10, 0"/>
                                                         <TextBlock Text="{Binding Path=RoleActor}" Foreground="White" FontFamily="Bahnschrift Light Condensed" FontSize="20" Margin="0, 5, 10, 0"/>
                                                     </StackPanel>
                                                 </DataTemplate>

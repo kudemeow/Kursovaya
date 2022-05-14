@@ -21,6 +21,8 @@ namespace WpfApp1
         }
         private static CinemaEntities context = new CinemaEntities();
         public static CinemaEntities GetContext() => context;
+
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

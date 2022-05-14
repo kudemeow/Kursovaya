@@ -19,7 +19,12 @@ namespace WpfApp1
         {
             this.Film = new HashSet<Film>();
         }
-    
+
+        public override string ToString()
+        {
+            return FirstName + " " + LastName;
+        }
+
         public int Director_ID { get; set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
