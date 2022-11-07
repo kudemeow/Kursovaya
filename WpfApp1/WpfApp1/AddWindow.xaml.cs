@@ -29,6 +29,7 @@ namespace WpfApp1
             OpenFileDialog dlg = new OpenFileDialog();
             dlg.FileName = "";
             dlg.Filter = "*.jpg;*.jpeg;*.png";
+
             if (dlg.ShowDialog() == true)
             {
                 img.Source = new BitmapImage(new Uri(dlg.FileName));

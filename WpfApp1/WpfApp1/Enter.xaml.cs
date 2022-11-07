@@ -1,7 +1,6 @@
 ﻿using System.Windows;
 using System.Linq;
 using WpfApp1;
-using System.Windows.Input;
 
 namespace Kursach
 {
